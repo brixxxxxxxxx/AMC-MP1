@@ -1,10 +1,5 @@
 import { Text, View, StyleSheet, Image, Switch } from 'react-native';
 import {useState} from 'react';
-// You can import supported modules from npm
-import { Card } from 'react-native-paper';
-
-// or any files within the Snack
-import AssetExample from './components/AssetExample';
 
 export default function App() {
   const [Enable, setEnable] = useState('');
@@ -13,7 +8,7 @@ export default function App() {
     <View style = {{backgroundColor: Enable ? "yellow":"black"}}>
       <View style = {styles.center}>
         <Text style = {{marginTop: 300, fontSize: 25, color: Enable ? "black":"white"}}>AMC MP1</Text>
-        <Image source = {Enable ? require('./assets/Light.jpg'):require('./assets/Bulb.jpg')} style={styles.img}/>
+        <Image source = {Enable ? require('./light.jpg'):require('./bulb.jpg')} style={styles.img}/>
         <Switch
         trackColor = {{false: "gray", true: "aqua"}}
         thumbColor = {Enable ? "blue":"lightgray"}
